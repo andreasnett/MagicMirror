@@ -1,10 +1,10 @@
 :root {
-  --color-text: #999;
-  --color-text-dimmed: #666;
-  --color-text-bright: #fff;
+  --color-text: #4a3004;
+  --color-text-dimmed: #785818;
+  --color-text-bright: #daa520;
   --color-background: #000;
-  --font-primary: "Roboto Condensed";
-  --font-secondary: "Roboto";
+  --font-primary: "Luminari", "Perpetua", "Palatino", serif;
+  --font-secondary: "Luminari", "Perpetua", "Palatino", serif;
   --font-size: 20px;
   --font-size-xsmall: 0.75rem;
   --font-size-small: 1rem;
@@ -21,7 +21,10 @@
 html {
   cursor: none;
   overflow: hidden;
-  background: var(--color-background);
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('custom_modules/parchment.png');
+  background-size: cover;
   user-select: none;
   font-size: var(--font-size);
 }
@@ -118,7 +121,8 @@ header {
   font-size: var(--font-size-xsmall);
   font-family: var(--font-primary), Arial, Helvetica, sans-serif;
   font-weight: 400;
-  border-bottom: 1px solid var(--color-text-dimmed);
+  border-bottom: 2px solid var(--color-text-bright);
+  text-shadow: 0 0 10px var(--color-text-bright);
   line-height: 15px;
   padding-bottom: 5px;
   margin-bottom: 10px;
@@ -136,6 +140,10 @@ sup {
 
 .module {
   margin-bottom: var(--gap-modules);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(218, 165, 32, 0.2);
 }
 
 .module.hidden {
