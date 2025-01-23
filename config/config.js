@@ -54,23 +54,24 @@ let config = {
 		{
 			module: "MMM-Dataverse",
 			position: "bottom_right",
-			config: {
-				clientId: "",
-				clientSecret: "",
-				tenantId: "",
-				environment: "https://ingardiumleviosaacdc.crm4.dynamics.com",
-				entity: "il_petses",			 
-				updateInterval: 60000
-			}
 		},
 		{
-			module: "MMM-SimpleLogo",
-			position: "bottom_left",
-			config: {
-				fileUrl: "https://i.pinimg.com/originals/0c/74/14/0c7414af4d19d6fc0afcfe4bc46755f6.png",
-				width: "700px",
-			}
-		},
+            module: "MMM-SimpleLogo",
+            position: "bottom_left",
+            config: {
+                imagePaths: [
+                    "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGozcmxwdDRpaHA0ZHhqMjcxaTBtMDRiY2t5MnR4d3I0dWlseGF0diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/I4fFwkUIRecoObpmzU/giphy.gif",
+                    "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3QxdG92em05MTJ1M2dhZnlyZTJycWNtOHZyYWI3cjlsMXUxYjNpYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/UU4ichdd14PYtCUKmK/giphy.gif",
+                    "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHdveDJvdnNyOGtoemNxcjJ5ZnkzejNwZ2dqbHR2aHA1M2J5dHo4YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ACzX3DubliNxmW5sHM/giphy.gif",
+					"https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGc4dmNsN2JjNnZjeHMxdzk2MzV6bWVvZnNicWxlbGI0YW5kN2NreCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/XjJW4JV9sKgJ2Qpimp/giphy.gif",
+					"https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHM1aWtvbWY5aDZodHhjYmo0cDgxOTU5dW1lODlpeTI1bTFzMjZubiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/uygHNAvyHf8FjG4zoI/giphy.gif", 
+					"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGxlYnZycXQ3YTNsOWoyb3VhdHQ1NmlwMnd5a2R3aW5mNDRyN2J2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/TitLQY80vZgrK/giphy.gif", 
+					"https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExczF6NzZlemttenk3OXc4YmRscmQxYWJ6NDQzd2plcXdmemtiZW9lZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/2vQBlQkJOyK3u/giphy.gif", 
+					"https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJ4ZHB5N2h1d25xcGdtY2VsZ3B4aGNuOXhjOGd5eXY5MnJ2N3k4ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/bTe32xXeAPTNeLg91T/giphy.gif"
+                ],
+                height: "500px"
+            }
+        },
 		{
 			module: "compliments",
 			position: "bottom_bar"

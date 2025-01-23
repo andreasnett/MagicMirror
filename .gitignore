@@ -86,3 +86,4 @@ js/positions.js
 
 # Ignore sensitive credentials file
 config/credentials.js
+*credentials.js
