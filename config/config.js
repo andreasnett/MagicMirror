@@ -8,6 +8,7 @@
  * which will be converted to `config.js` while starting. For more information
  * see https://docs.magicmirror.builders/configuration/introduction.html#enviromnent-variables
  */
+
 let config = {
 	address: "localhost",	// Address to listen on, can be:
 							// - "localhost", "127.0.0.1", "::1" to listen on loopback interface
@@ -39,70 +40,40 @@ let config = {
 
 	modules: [
 		{
-			module: "alert",
-		},
-		{
-			module: "updatenotification",
-			position: "top_bar"
-		},
-		{
-			module: "clock",
-			position: "top_left"
-		},
-		{
-			module: "calendar",
-			header: "US Holidays",
-			position: "top_left",
+			module: "compliments",
+			position: "top_bar",
 			config: {
-				calendars: [
-					{
-						fetchInterval: 7 * 24 * 60 * 60 * 1000,
-						symbol: "calendar-check",
-						url: "https://ics.calendarlabs.com/76/mm3137/US_Holidays.ics"
-					}
-				]
+				compliments: {
+					anytime: [
+						"Welcome to the Mirror of Noitceles",
+						"Making every selection magical"
+					]
+				}
+			}
+		},
+		{
+			module: "MMM-Dataverse",
+			position: "bottom_right",
+			config: {
+				clientId: "",
+				clientSecret: "",
+				tenantId: "",
+				environment: "https://ingardiumleviosaacdc.crm4.dynamics.com",
+				entity: "il_petses",			 
+				updateInterval: 60000
+			}
+		},
+		{
+			module: "MMM-SimpleLogo",
+			position: "bottom_left",
+			config: {
+				fileUrl: "https://i.pinimg.com/originals/0c/74/14/0c7414af4d19d6fc0afcfe4bc46755f6.png",
+				width: "700px",
 			}
 		},
 		{
 			module: "compliments",
-			position: "lower_third"
-		},
-		{
-			module: "weather",
-			position: "top_right",
-			config: {
-				weatherProvider: "openmeteo",
-				type: "current",
-				lat: 40.776676,
-				lon: -73.971321
-			}
-		},
-		{
-			module: "weather",
-			position: "top_right",
-			header: "Weather Forecast",
-			config: {
-				weatherProvider: "openmeteo",
-				type: "forecast",
-				lat: 40.776676,
-				lon: -73.971321
-			}
-		},
-		{
-			module: "newsfeed",
-			position: "bottom_bar",
-			config: {
-				feeds: [
-					{
-						title: "New York Times",
-						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true,
-				broadcastNewsFeeds: true,
-				broadcastNewsUpdates: true
-			}
+			position: "bottom_bar"
 		},
 	]
 };

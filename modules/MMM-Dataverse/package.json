@@ -1,0 +1,15 @@
+{
+  "name": "mmm-dataverse",
+  "version": "1.0.0",
+  "description": "Magic Mirror Module for Azure Dataverse integration",
+  "main": "MMM-Dataverse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@azure/msal-node": "^1.14.6",
+    "axios": "^1.3.4"
+  }
+}

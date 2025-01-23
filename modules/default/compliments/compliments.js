@@ -4,30 +4,19 @@ Module.register("compliments", {
 	// Module config defaults.
 	defaults: {
 		compliments: {
-			morning: [
-				"Mischief managed!",
-				"Time for potions class",
-				"Ready for a magical day?"
-			],
-			afternoon: [
-				"Having a magical day?",
-				"Care for a game of chess?",
-				"Time for some spells"
-			],
-			evening: [
-				"Nox",
-				"Time to consult the stars",
-				"The night is full of magic"
+			anytime: [
+				"This is not the pet for you",
+				"Please select another",
+				"Magical! This is your pet",
+				"What about a rat?",
+				"A cat you should choose",
+				"Don`t be a niffler",
 			]
 			},
 		updateInterval: 30000,
 		remoteFile: null,
 		remoteFileRefreshInterval: 0,
 		fadeSpeed: 4000,
-		morningStartTime: 3,
-		morningEndTime: 12,
-		afternoonStartTime: 12,
-		afternoonEndTime: 17,
 		random: true,
 		specialDayUnique: false
 	},
