@@ -1,11 +1,9 @@
 Module.register("MMM-Dataverse", {
     defaults: {
         updateInterval: 60000,
-        clientId: "",
-        clientSecret: "",
-        tenantId: "",
-        environment: "",
-        entity: "",
+
+        environment: "https://ingardiumleviosaacdc.crm4.dynamics.com",
+        entity: "il_petses",
     },
 
     start: function() {
@@ -37,29 +35,21 @@ Module.register("MMM-Dataverse", {
             return wrapper;
         }
 
-        const table = document.createElement("table");
+        const nifflerRecord = this.records.find(record => record.il_name === 'Niffler');
         
-        // Add header row
-        const headerRow = document.createElement("tr");
-        Object.keys(this.records[0]).forEach(key => {
-            const th = document.createElement("th");
-            th.innerHTML = key;
-            headerRow.appendChild(th);
-        });
-        table.appendChild(headerRow);
+        if (!nifflerRecord) {
+            wrapper.innerHTML = '<div class="dimmed">Niffler not found</div>';
+            return wrapper;
+        }
 
-        // Add data rows
-        this.records.forEach(record => {
-            const row = document.createElement("tr");
-            Object.values(record).forEach(value => {
-                const cell = document.createElement("td");
-                cell.innerHTML = value || "-";
-                row.appendChild(cell);
-            });
-            table.appendChild(row);
-        });
+        const header = document.createElement("h2");
+        header.innerHTML = nifflerRecord.il_name || "Name not found";
+        wrapper.appendChild(header);
 
-        wrapper.appendChild(table);
+        const paragraph = document.createElement("p");
+        paragraph.innerHTML = nifflerRecord.il_description || "Description not found";
+        wrapper.appendChild(paragraph);
+
         return wrapper;
     },
     getStyles: function() {
